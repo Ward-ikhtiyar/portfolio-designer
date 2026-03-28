@@ -91,7 +91,7 @@ const PhoneShowcase = ({ features, primaryColor, open, onClose, landscape = fals
 
           {/* Phone body */}
           <div
-            className="relative w-[280px] h-[560px] rounded-[40px] border-[6px] p-[2px] overflow-hidden shadow-2xl"
+            className={`relative ${landscape ? 'w-[560px] h-[280px] rounded-[30px]' : 'w-[280px] h-[560px] rounded-[40px]'} border-[6px] p-[2px] overflow-hidden shadow-2xl`}
             style={{
               borderColor: `hsl(${primaryColor} / 0.4)`,
               background: `linear-gradient(145deg, hsl(${primaryColor} / 0.15), hsl(var(--card)))`,
