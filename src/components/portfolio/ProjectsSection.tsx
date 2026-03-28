@@ -108,11 +108,12 @@ const ProjectsSection = () => {
       {/* Phone showcase modal */}
       <AnimatePresence>
         {showcaseIdx !== null && projects[showcaseIdx]?.showcase && (
-          <PhoneShowcase
+           <PhoneShowcase
             features={projects[showcaseIdx].showcase!}
             primaryColor={projects[showcaseIdx].colors.primary}
             open={true}
             onClose={() => setShowcaseIdx(null)}
+            landscape={projects[showcaseIdx].showcaseLandscape}
           />
         )}
       </AnimatePresence>
