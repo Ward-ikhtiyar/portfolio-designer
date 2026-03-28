@@ -60,14 +60,16 @@ const PhoneShowcase = ({ features, primaryColor, open, onClose }: PhoneShowcaseP
 
         {/* Feature label */}
         <motion.p
-          key={`label-${current}`}
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="text-lg font-semibold font-display"
-          style={{ color: `hsl(${primaryColor})` }}
-        >
-          {feature.label}
-        </motion.p>
+  key={`label-${current}`}
+  initial={{ opacity: 0, y: -10 }}
+  animate={{ opacity: 1, y: 0 }}
+  exit={{ opacity: 0, y: 10 }}
+  transition={{ duration: 0.25, ease: "easeInOut" }}
+  className="text-lg font-semibold font-display max-w-full truncate text-center"
+  style={{ color: `hsl(${primaryColor})` }}
+>
+  {feature.label}
+</motion.p>
 
         {/* Phone frame */}
         <div className="relative">
