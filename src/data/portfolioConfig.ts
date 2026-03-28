@@ -2,6 +2,7 @@ import planDetails from "@/assets/dr_calories/plan_details.jpg";
 import waterReminders from "@/assets/dr_calories/water_reminders.jpg";
 import customPlan from "@/assets/dr_calories/custom_plan.mp4";
 import bodyAnalysis from "@/assets/dr_calories/bodyAnalysis.mp4";
+import createPlan from "@/assets/dr_calories/create_plan.mp4";
 import demoEasyrent1 from "@/assets/demo-easyrent-1.jpg";
 import demoEasyrent2 from "@/assets/demo-easyrent-2.jpg";
 
@@ -151,11 +152,11 @@ export const portfolioData: PortfolioData = {
         type: "none",
       },
       showcase:[
-       { label:"Custom Plan",videoUrl:customPlan},
+       { label:"Custom Plan",videoUrl:customPlan,},
        {label:"Plan Details",image:planDetails},
        {label:"Water Reminders",image:waterReminders},
        {label:"Body Analysis",videoUrl:bodyAnalysis},
-
+       {label:"Create a Plan",videoUrl:createPlan,landscape:true},
       ],
       colors: {
         primary: "85.33 54.22%  51.18%",
@@ -221,9 +222,9 @@ export const portfolioData: PortfolioData = {
       githubUrl: "https://github.com/Ward-ikhtiyar/Easyrent-Rental-Platform",
       liveUrl: "https://easyrent-rental-platform.vercel.app",
       media: {
-        enabled: true,
+        enabled: false,
         type: "images",
-        images: [demoEasyrent1, demoEasyrent2],
+        images: [],
       },
       showcase: [
         { label: "Property Search & Filters", image: demoEasyrent1 },
