@@ -98,10 +98,14 @@ const PhoneShowcase = ({ features, primaryColor, open, onClose, landscape = fals
             }}
           >
             {/* Notch */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-6 bg-card rounded-b-2xl z-10" />
+            {landscape ? (
+              <div className="absolute left-0 top-1/2 -translate-y-1/2 w-6 h-24 bg-card rounded-r-2xl z-10" />
+            ) : (
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-6 bg-card rounded-b-2xl z-10" />
+            )}
 
             {/* Screen content */}
-            <div className="w-full h-full rounded-[34px] overflow-hidden bg-card relative">
+            <div className={`w-full h-full ${landscape ? 'rounded-[24px]' : 'rounded-[34px]'} overflow-hidden bg-card relative`}>
               <AnimatePresence custom={direction} mode="wait">
                 <motion.div
                   key={current}
