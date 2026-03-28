@@ -1,3 +1,8 @@
+import demoDrCalories1 from "@/assets/demo-dr-calories-1.jpg";
+import demoDrCalories2 from "@/assets/demo-dr-calories-2.jpg";
+import demoEasyrent1 from "@/assets/demo-easyrent-1.jpg";
+import demoEasyrent2 from "@/assets/demo-easyrent-2.jpg";
+
 export type MediaType = "none" | "video" | "images";
 
 export interface SectionMedia {
@@ -109,8 +114,9 @@ export const portfolioData: PortfolioData = {
         },
       ],
       media: {
-        enabled: false,
-        type: "none",
+        enabled: true,
+        type: "images",
+        images: [demoDrCalories1, demoDrCalories2],
       },
       colors: {
         primary: "200 80% 55%",
@@ -151,8 +157,9 @@ export const portfolioData: PortfolioData = {
       githubUrl: "https://github.com/Ward-ikhtiyar/Easyrent-Rental-Platform",
       liveUrl: "https://easyrent-rental-platform.vercel.app",
       media: {
-        enabled: false,
-        type: "none",
+        enabled: true,
+        type: "images",
+        images: [demoEasyrent1, demoEasyrent2],
       },
       colors: {
         primary: "260 70% 60%",
