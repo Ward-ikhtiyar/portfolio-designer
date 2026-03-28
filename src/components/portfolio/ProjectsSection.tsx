@@ -2,11 +2,14 @@ import { portfolioData } from "@/data/portfolioConfig";
 import SectionWrapper from "./SectionWrapper";
 import SectionTitle from "./SectionTitle";
 import MediaDisplay from "./MediaDisplay";
-import { motion } from "framer-motion";
-import { ExternalLink, Github } from "lucide-react";
+import PhoneShowcase from "./PhoneShowcase";
+import { motion, AnimatePresence } from "framer-motion";
+import { ExternalLink, Github, Smartphone } from "lucide-react";
+import { useState } from "react";
 
 const ProjectsSection = () => {
   const { projects } = portfolioData;
+  const [showcaseIdx, setShowcaseIdx] = useState<number | null>(null);
 
   return (
     <SectionWrapper id="projects" colors={{ primary: "36 95% 55%", secondary: "220 18% 10%" }}>
@@ -34,6 +37,16 @@ const ProjectsSection = () => {
                   <p className="text-muted-foreground mt-1">{project.description}</p>
                 </div>
                 <div className="flex gap-2 shrink-0">
+                  {project.showcase && project.showcase.length > 0 && (
+                    <button
+                      onClick={() => setShowcaseIdx(idx)}
+                      className="h-9 px-3 rounded-lg bg-secondary flex items-center gap-2 hover:bg-surface-hover transition-colors text-sm font-medium"
+                      style={{ color: `hsl(${project.colors.primary})` }}
+                    >
+                      <Smartphone className="w-4 h-4" />
+                      <span className="hidden sm:inline">Preview</span>
+                    </button>
+                  )}
                   {project.githubUrl && (
                     <a
                       href={project.githubUrl}
@@ -91,6 +104,18 @@ const ProjectsSection = () => {
           </motion.div>
         ))}
       </div>
+
+      {/* Phone showcase modal */}
+      <AnimatePresence>
+        {showcaseIdx !== null && projects[showcaseIdx]?.showcase && (
+          <PhoneShowcase
+            features={projects[showcaseIdx].showcase!}
+            primaryColor={projects[showcaseIdx].colors.primary}
+            open={true}
+            onClose={() => setShowcaseIdx(null)}
+          />
+        )}
+      </AnimatePresence>
     </SectionWrapper>
   );
 };
