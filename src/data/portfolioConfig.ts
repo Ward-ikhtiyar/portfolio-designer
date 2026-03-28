@@ -1,5 +1,7 @@
-import demoDrCalories1 from "@/assets/demo-dr-calories-1.jpg";
-import demoDrCalories2 from "@/assets/demo-dr-calories-2.jpg";
+import planDetails from "@/assets/dr_calories/plan_details.jpg";
+import customPlan from "@/assets/dr_calories/custom_plan.mp4";
+import bodyAnalysis from "@/assets/dr_calories/body_analysis.mp4";
+import waterReminders from "@/assets/dr_calories/water_reminders.jpg";
 import demoEasyrent1 from "@/assets/demo-easyrent-1.jpg";
 import demoEasyrent2 from "@/assets/demo-easyrent-2.jpg";
 
@@ -120,7 +122,7 @@ export const portfolioData: PortfolioData = {
       ],
       media: {
         enabled: true,
-        type: "images",
+        type: "video",
         images: [],
       },
       colors: {
@@ -147,6 +149,13 @@ export const portfolioData: PortfolioData = {
         enabled: false,
         type: "none",
       },
+      showcase:[
+       { label:"Custom Plan",videoUrl:customPlan},
+       {label:"Plan Details",image:planDetails},
+       {label:"Water Reminders",image:waterReminders},
+       {label:"Body Analysis",videoUrl:bodyAnalysis},
+
+      ],
       colors: {
         primary: "85.33 54.22%  51.18%",
         secondary: "220 18% 10%",
@@ -189,8 +198,8 @@ export const portfolioData: PortfolioData = {
         type: "none",
       },
       showcase: [
-        { label: "Live Monitoring Dashboard", image: demoDrCalories1 },
-        { label: "Risk Alert System", image: demoDrCalories2 },
+        // { label: "Live Monitoring Dashboard", image: planDetails },
+        // { label: "Risk Alert System", image: demoDrCalories2 },
       ],
       colors: {
         primary: "150 70% 45%",
