@@ -17,6 +17,12 @@ export interface SectionColors {
   secondary: string;
 }
 
+export interface ShowcaseFeature {
+  label: string;
+  image?: string;
+  videoUrl?: string;
+}
+
 export interface ProjectItem {
   title: string;
   description: string;
@@ -25,6 +31,7 @@ export interface ProjectItem {
   githubUrl?: string;
   liveUrl?: string;
   media: SectionMedia;
+  showcase?: ShowcaseFeature[];
   colors: SectionColors;
 }
 
