@@ -16,7 +16,7 @@ interface PhoneShowcaseProps {
   landscape?: boolean;
 }
 
-const PhoneShowcase = ({ features, primaryColor, open, onClose }: PhoneShowcaseProps) => {
+const PhoneShowcase = ({ features, primaryColor, open, onClose, landscape = false }: PhoneShowcaseProps) => {
   const [current, setCurrent] = useState(0);
   const [direction, setDirection] = useState(0);
 
