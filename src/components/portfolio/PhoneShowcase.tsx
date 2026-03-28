@@ -14,10 +14,9 @@ interface PhoneShowcaseProps {
   primaryColor: string;
   open: boolean;
   onClose: () => void;
-  landscape?: boolean;
 }
 
-const PhoneShowcase = ({ features, primaryColor, open, onClose, landscape = false }: PhoneShowcaseProps) => {
+const PhoneShowcase = ({ features, primaryColor, open, onClose }: PhoneShowcaseProps) => {
   const [current, setCurrent] = useState(0);
   const [direction, setDirection] = useState(0);
 

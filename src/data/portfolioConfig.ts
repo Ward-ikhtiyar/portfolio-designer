@@ -23,6 +23,7 @@ export interface ShowcaseFeature {
   label: string;
   image?: string;
   videoUrl?: string;
+  landscape?: boolean;
 }
 
 export interface ProjectItem {
