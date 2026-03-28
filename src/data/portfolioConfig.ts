@@ -1,6 +1,4 @@
 import planDetails from "@/assets/dr_calories/plan_details.jpg";
-import customPlan from "@/assets/dr_calories/custom_plan.mp4";
-import bodyAnalysis from "@/assets/dr_calories/body_analysis.mp4";
 import waterReminders from "@/assets/dr_calories/water_reminders.jpg";
 import demoEasyrent1 from "@/assets/demo-easyrent-1.jpg";
 import demoEasyrent2 from "@/assets/demo-easyrent-2.jpg";
@@ -150,10 +148,10 @@ export const portfolioData: PortfolioData = {
         type: "none",
       },
       showcase:[
-       { label:"Custom Plan",videoUrl:customPlan},
+       { label:"Custom Plan",image:planDetails},
        {label:"Plan Details",image:planDetails},
        {label:"Water Reminders",image:waterReminders},
-       {label:"Body Analysis",videoUrl:bodyAnalysis},
+       {label:"Body Analysis",image:planDetails},
 
       ],
       colors: {
