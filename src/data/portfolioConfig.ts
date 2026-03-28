@@ -146,6 +146,10 @@ export const portfolioData: PortfolioData = {
         enabled: false,
         type: "none",
       },
+      showcase: [
+        { label: "Live Monitoring Dashboard", image: demoDrCalories1 },
+        { label: "Risk Alert System", image: demoDrCalories2 },
+      ],
       colors: {
         primary: "150 70% 45%",
         secondary: "220 18% 10%",
@@ -168,6 +172,11 @@ export const portfolioData: PortfolioData = {
         type: "images",
         images: [demoEasyrent1, demoEasyrent2],
       },
+      showcase: [
+        { label: "Property Search & Filters", image: demoEasyrent1 },
+        { label: "360° Panoramic View", image: demoEasyrent2 },
+        { label: "Subscription Checkout", image: demoEasyrent1 },
+      ],
       colors: {
         primary: "260 70% 60%",
         secondary: "220 18% 10%",
