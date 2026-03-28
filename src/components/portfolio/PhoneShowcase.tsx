@@ -141,7 +141,11 @@ const PhoneShowcase = ({ features, primaryColor, open, onClose, landscape = fals
             </div>
 
             {/* Home indicator */}
-            <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-20 h-1 rounded-full bg-foreground/20" />
+            {landscape ? (
+              <div className="absolute right-2 top-1/2 -translate-y-1/2 w-1 h-20 rounded-full bg-foreground/20" />
+            ) : (
+              <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-20 h-1 rounded-full bg-foreground/20" />
+            )}
           </div>
         </div>
 
