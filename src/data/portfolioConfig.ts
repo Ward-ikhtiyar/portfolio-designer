@@ -21,6 +21,7 @@ export interface ProjectItem {
   title: string;
   description: string;
   bullets: string[];
+  CompanyProject?:string;
   techStack?: string[];
   githubUrl?: string;
   liveUrl?: string;
@@ -93,30 +94,27 @@ export const portfolioData: PortfolioData = {
       company: "E-Solutions Group",
       period: "April 2025 – Present",
       projects: [
-        {
-          name: "Dr Calories (Nutrition Planning App)",
-          bullets: [
-            "Enhanced and maintained a legacy Flutter codebase, improving scalability and code organization",
-            "Implemented real-time macro calculation logic with synchronized updates across meals and daily totals",
-            "Designed and developed features for personalized meal planning and user data management",
-            "Collaborated with backend engineers to define feature flows and integrate APIs",
-            "Built responsive UI components and handled complex state synchronization",
-          ],
-        },
-        {
-          name: "Velvet (E-commerce Application)",
-          bullets: [
-            "Developed core e-commerce features including product browsing, search, filtering, cart, and checkout",
-            "Integrated backend services for product listings, orders, and user workflows",
-            "Implemented category and attribute-based filtering with optimized state management",
-            "Improved UI responsiveness across different screen sizes and devices",
-          ],
-        },
       ],
       media: {
         enabled: true,
         type: "images",
-        images: [demoDrCalories1, demoDrCalories2],
+        images: [],
+      },
+      colors: {
+        primary: "200 80% 55%",
+        secondary: "220 18% 10%",
+      },
+    },
+    {
+      role: "Flutter Developer (Freelance)",
+      company: "",
+      period: "March 2026 – Present",
+      projects: [
+      ],
+      media: {
+        enabled: true,
+        type: "images",
+        images: [],
       },
       colors: {
         primary: "200 80% 55%",
@@ -126,6 +124,50 @@ export const portfolioData: PortfolioData = {
   ],
   projects: [
     {
+      CompanyProject:"E-solutions group",
+      title: "Dr Calories (Nutrition Planning App)",
+      description: " A nutrtion app for personalized meal planning and real-time macro tracking with seamless data synchronization.",
+      bullets: [
+        "Enhanced and maintained a legacy Flutter codebase, improving scalability and code organization",
+        "Implemented real-time macro calculation logic with synchronized updates across meals and daily totals",
+        "Designed and developed features for personalized meal planning and user data management",
+        "Collaborated with backend engineers to define feature flows and integrate APIs",
+        "Built responsive UI components and handled complex state synchronization",
+      ],
+       techStack: ["Flutter", "FireBase","Local Notifications"],
+      githubUrl: "",
+      media: {
+        enabled: false,
+        type: "none",
+      },
+      colors: {
+        primary: "85.33 54.22%  51.18%",
+        secondary: "220 18% 10%",
+      },
+    },
+     {
+      CompanyProject:"E-solutions group",
+          title: "Velvet (E-commerce Application)",
+          description:"An e-commerce application featuring product browsing, smart filtering, and a seamless checkout experience",
+          bullets: [
+            "Developed core e-commerce features including product browsing, search, filtering, cart, and checkout",
+            "Integrated backend services for product listings, orders, and user workflows",
+            "Implemented category and attribute-based filtering with optimized state management",
+            "Improved UI responsiveness across different screen sizes and devices",
+          ], techStack: ["Flutter", "Payment"],
+      githubUrl: "",
+      media: {
+        enabled: false,
+        type: "none",
+      },
+      colors: {
+        primary: "0 0% 100%",
+        secondary: "220 18% 10%",
+      },
+        },
+        
+    {
+      CompanyProject:"Freelance",
       title: "Smart Foot Health Monitoring",
       description: "Bluetooth-enabled Flutter app for monitoring foot pressure and temperature for diabetic patients",
       bullets: [
@@ -145,6 +187,7 @@ export const portfolioData: PortfolioData = {
       },
     },
     {
+      CompanyProject:null,
       title: "Easy Rent – Real Estate Platform",
       description: "Cross-platform property rental app using Flutter and React",
       bullets: [
@@ -167,6 +210,7 @@ export const portfolioData: PortfolioData = {
       },
     },
     {
+      CompanyProject:null,
       title: "Monumental Habits – Habit Tracker",
       description: "Habit tracking app with calendar-based progress visualization and analytics",
       bullets: [
