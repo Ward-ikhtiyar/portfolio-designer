@@ -35,6 +35,7 @@ export interface ProjectItem {
   liveUrl?: string;
   media: SectionMedia;
   showcase?: ShowcaseFeature[];
+  showcaseLandscape?: boolean;
   colors: SectionColors;
 }
 
