@@ -23,6 +23,7 @@ export interface ShowcaseFeature {
   label: string;
   image?: string;
   videoUrl?: string;
+  landscape?: boolean;
 }
 
 export interface ProjectItem {
@@ -35,7 +36,6 @@ export interface ProjectItem {
   liveUrl?: string;
   media: SectionMedia;
   showcase?: ShowcaseFeature[];
-  showcaseLandscape?: boolean;
   colors: SectionColors;
 }
 

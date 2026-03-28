@@ -113,7 +113,6 @@ const ProjectsSection = () => {
             primaryColor={projects[showcaseIdx].colors.primary}
             open={true}
             onClose={() => setShowcaseIdx(null)}
-            landscape={projects[showcaseIdx].showcaseLandscape}
           />
         )}
       </AnimatePresence>

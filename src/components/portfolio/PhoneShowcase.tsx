@@ -6,6 +6,7 @@ export interface ShowcaseFeature {
   label: string;
   image?: string;
   videoUrl?: string;
+  landscape?: boolean;
 }
 
 interface PhoneShowcaseProps {
@@ -13,10 +14,9 @@ interface PhoneShowcaseProps {
   primaryColor: string;
   open: boolean;
   onClose: () => void;
-  landscape?: boolean;
 }
 
-const PhoneShowcase = ({ features, primaryColor, open, onClose, landscape = false }: PhoneShowcaseProps) => {
+const PhoneShowcase = ({ features, primaryColor, open, onClose }: PhoneShowcaseProps) => {
   const [current, setCurrent] = useState(0);
   const [direction, setDirection] = useState(0);
 
@@ -91,21 +91,21 @@ const PhoneShowcase = ({ features, primaryColor, open, onClose, landscape = fals
 
           {/* Phone body */}
           <div
-            className={`relative ${landscape ? 'w-[560px] h-[280px] rounded-[30px]' : 'w-[280px] h-[560px] rounded-[40px]'} border-[6px] p-[2px] overflow-hidden shadow-2xl`}
+            className={`relative ${feature.landscape ? 'w-[560px] h-[280px] rounded-[30px]' : 'w-[280px] h-[560px] rounded-[40px]'} border-[6px] p-[2px] overflow-hidden shadow-2xl transition-all duration-300`}
             style={{
               borderColor: `hsl(${primaryColor} / 0.4)`,
               background: `linear-gradient(145deg, hsl(${primaryColor} / 0.15), hsl(var(--card)))`,
             }}
           >
             {/* Notch */}
-            {landscape ? (
+            {feature.landscape ? (
               <div className="absolute left-0 top-1/2 -translate-y-1/2 w-6 h-24 bg-card rounded-r-2xl z-10" />
             ) : (
               <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-6 bg-card rounded-b-2xl z-10" />
             )}
 
             {/* Screen content */}
-            <div className={`w-full h-full ${landscape ? 'rounded-[24px]' : 'rounded-[34px]'} overflow-hidden bg-card relative`}>
+            <div className={`w-full h-full ${feature.landscape ? 'rounded-[24px]' : 'rounded-[34px]'} overflow-hidden bg-card relative`}>
               <AnimatePresence custom={direction} mode="wait">
                 <motion.div
                   key={current}
@@ -141,7 +141,7 @@ const PhoneShowcase = ({ features, primaryColor, open, onClose, landscape = fals
             </div>
 
             {/* Home indicator */}
-            {landscape ? (
+            {feature.landscape ? (
               <div className="absolute right-2 top-1/2 -translate-y-1/2 w-1 h-20 rounded-full bg-foreground/20" />
             ) : (
               <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-20 h-1 rounded-full bg-foreground/20" />
