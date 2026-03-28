@@ -3,8 +3,29 @@ import waterReminders from "@/assets/dr_calories/water_reminders.jpg";
 import customPlan from "@/assets/dr_calories/custom_plan.mp4";
 import bodyAnalysis from "@/assets/dr_calories/bodyAnalysis.mp4";
 import createPlan from "@/assets/dr_calories/create_plan.mp4";
-import demoEasyrent1 from "@/assets/demo-easyrent-1.jpg";
-import demoEasyrent2 from "@/assets/demo-easyrent-2.jpg";
+import addToCart from "@/assets/velvet/add_to_cart.png";
+import categories from "@/assets/velvet/categories.png";
+import filter1 from "@/assets/velvet/filter_1.png";
+import filter2 from "@/assets/velvet/filter_2.png";
+import filter3 from "@/assets/velvet/filter_3.png";
+import search from "@/assets/velvet/search.png";
+import settings from "@/assets/velvet/settings.png";
+import product_details from "@/assets/velvet/product_details.png";
+import deviceFound from "@/assets/foot_tracker/device_found.jpg";
+import monitorTracking from "@/assets/foot_tracker/monitor_tracking.jpg";
+import noDevice from "@/assets/foot_tracker/no_device.jpg";
+import patientInfoForm from "@/assets/foot_tracker/patient_info_form.jpg";
+import realTimeMonitor from "@/assets/foot_tracker/real_time_monitor.jpg";
+import scanDevices from "@/assets/foot_tracker/scan_devices.jpg";
+import turnBluetooth from "@/assets/foot_tracker/turn_bluetooth.jpg";
+
+
+
+
+
+
+
+
 
 export type MediaType = "none" | "video" | "images";
 
@@ -178,6 +199,16 @@ export const portfolioData: PortfolioData = {
         enabled: false,
         type: "none",
       },
+      showcase: [
+        { label: "Categories", image: categories },
+        { label: "Search", image: search },
+        { label: "Filter Options", image: filter1 },
+        { label: "Additional Filters", image: filter2 },
+        { label: "More Filters", image: filter3 },
+        { label: "Product Details", image: product_details },
+        { label: "Add to Cart", image: addToCart },
+        { label: "Settings", image: settings },
+      ],
       colors: {
         primary: "0 0% 100%",
         secondary: "220 18% 10%",
@@ -200,8 +231,13 @@ export const portfolioData: PortfolioData = {
         type: "none",
       },
       showcase: [
-        // { label: "Live Monitoring Dashboard", image: planDetails },
-        // { label: "Risk Alert System", image: demoDrCalories2 },
+        { label: "Turn Bluetooth", image: turnBluetooth },
+        { label: "Scan Devices", image: scanDevices },
+        { label: "No Device", image: noDevice },
+        { label: "Device Found", image: deviceFound },
+        { label: "Patient Info Form", image: patientInfoForm },
+        { label: "Real Time Monitor", image: realTimeMonitor },
+        { label: "Monitor Tracking", image: monitorTracking },
       ],
       colors: {
         primary: "150 70% 45%",
@@ -223,14 +259,8 @@ export const portfolioData: PortfolioData = {
       liveUrl: "https://easyrent-rental-platform.vercel.app",
       media: {
         enabled: false,
-        type: "images",
-        images: [],
+        type: "none",
       },
-      showcase: [
-        { label: "Property Search & Filters", image: demoEasyrent1 },
-        { label: "360° Panoramic View", image: demoEasyrent2 },
-        { label: "Subscription Checkout", image: demoEasyrent1 },
-      ],
       colors: {
         primary: "260 70% 60%",
         secondary: "220 18% 10%",
